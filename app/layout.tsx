@@ -7,6 +7,7 @@ import DependenciesCheckProvider from "@/lib/providers/DependenciesCheckProvider
 import PluginProvider from "@/lib/providers/PluginProvider";
 
 import "./globals.css";
+import Header from "./_components/layout/header";
 
 
 const opensans = Open_Sans({
@@ -51,7 +52,8 @@ export default function RootLayout({
             <body className="w-auto h-auto relative">
                 <DependenciesCheckProvider>
                     <PluginProvider>
-                        <main className="w-auto h-auto relative overflow-x-hidden">
+                        <Header />
+                        <main className="w-auto h-auto relative overflow-x-hidden overflow-y-auto">
                             {children}
                         </main>
                     </PluginProvider>
