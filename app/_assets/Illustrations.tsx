@@ -1,3 +1,23 @@
+interface DogMarkProps {
+    className?: string;
+}
+
+
+export const DogMark = ({ className }: DogMarkProps) => {
+    return (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" className={className}>
+            <rect width="64" height="64" rx="16" fill="#FB6107" />
+            <g fill="#FEFAE0">
+                <ellipse cx="32" cy="40" rx="11" ry="9" />
+                <ellipse cx="19" cy="27" rx="5" ry="6.5" transform="rotate(-18 19 27)" />
+                <ellipse cx="45" cy="27" rx="5" ry="6.5" transform="rotate(18 45 27)" />
+                <ellipse cx="27" cy="18" rx="4.6" ry="6" />
+                <ellipse cx="37" cy="18" rx="4.6" ry="6" />
+            </g>
+        </svg>
+    )
+}
+
 export const ZigZagRopeVisual = () => {
     return (
         <div className="bg-cream-deep rounded-lg p-3 flex flex-col gap-2">

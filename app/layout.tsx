@@ -28,10 +28,10 @@ const bubblegum = Bubblegum_Sans({
 
 export const metadata: Metadata = {
     title: {
-        default: "Happy Dogs — WiggleTug | Automated Zig-Zag Tug & Chase",
+        default: "Happy Dogs - WiggleTug | Automated Zig-Zag Tug & Chase",
         template: "%s · Happy Dogs",
     },
-    description: "Meet WiggleTug: a motorized zig-zag rope and smart spring tug that mimics real human play and paces enrichment all day. Keep your dog happily busy for hours—even when you're away.",
+    description: "Meet WiggleTug: a motorized zig-zag rope and smart spring tug that mimics real human play and paces enrichment all day. Keep your dog happily busy for hours-even when you're away.",
     authors: [{ name: "Anandhasivam Sambathkumar" }],
     creator: "Anandhasivam Sambathkumar",
     publisher: "Anandhasivam Sambathkumar",

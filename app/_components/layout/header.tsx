@@ -90,20 +90,20 @@ const Header = () => {
             className="fixed inset-x-0 top-0 z-50 will-change-transform"
         >
             <div className="container-hd pt-3 sm:pt-4">
-                <div className="grid grid-cols-[1fr_auto_1fr] rounded-md items-center gap-1.5 px-2.5 py-2 sm:gap-3 sm:px-4 sm:py-2.5 bg-white/50 shadow-soft backdrop-blur-xl backdrop-saturate-150 border border-border">
+                <div className="grid grid-cols-[1fr_auto_1fr] rounded-md items-center gap-1.5 px-2.5 py-2 sm:gap-3 sm:px-4 sm:py-2.5 bg-white/50 shadow-soft backdrop-blur-xl backdrop-saturate-150 border border-border/50">
                     <Link
                         href="/"
                         aria-label="WiggleTug home"
-                        className="flex min-w-0 items-center gap-2 justify-self-start rounded-full outline-none focus-visible:ring-2 focus-visible:ring-olive focus-visible:ring-offset-2 focus-visible:ring-offset-cream"
+                        className="flex min-w-0 items-center gap-2 justify-self-start rounded-sm outline-none focus-visible:ring-2 focus-visible:ring-olive focus-visible:ring-offset-2 focus-visible:ring-offset-cream bg-primary-foreground px-2 py-1"
                     >
                         <Image
-                            src="/images/icon.svg"
+                            src="/wiggle-tug-icon.png"
                             alt=""
                             width={36}
                             height={36}
                             className="size-8 shrink-0 sm:size-9"
                         />
-                        <span className="max-[380px]:hidden truncate font-display text-base leading-none text-forest sm:text-xl">
+                        <span className="max-[380px]:hidden font-display text-base leading-none text-forest sm:text-xl">
                             WiggleTug
                         </span>
                     </Link>

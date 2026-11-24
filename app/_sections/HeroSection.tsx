@@ -29,7 +29,7 @@ const HeroSection = () => {
                     >
                         <Button asChild size="lg">
                             <Link href="/product/wiggletug-core">
-                                Shop WiggleTug Core — ₹6,500
+                                Shop WiggleTug Core - ₹6,500
                                 <HugeiconsIcon icon={ArrowRight01Icon} size={18} strokeWidth={2.2} />
                             </Link>
                         </Button>
@@ -56,7 +56,7 @@ const HeroSection = () => {
                         className="mt-6 font-display text-[40px] leading-[1.08] text-forest sm:text-[50px] lg:text-[56px] xl:text-[64px]"
                     >
                         Keep Your Dog <span className="text-tangerine">Happily Busy</span>{" "}
-                        for Hours—Even When You&apos;re Away.
+                        for Hours-Even When You&apos;re Away.
                     </h1>
 
                     {/* Signature zig-zag accent */}

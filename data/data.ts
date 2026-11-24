@@ -1,3 +1,16 @@
+import type { BtnId } from "@/lib/types";
+import { 
+  ArrowExpand01Icon, 
+  BatteryCharging01Icon, 
+  DashboardSpeed01Icon, 
+  LockIcon, 
+  Magnet01Icon, 
+  PowerIcon, 
+  PuzzleIcon, 
+  SpiralsIcon, 
+  Timer01Icon 
+} from "@hugeicons/core-free-icons";
+
 export const BASE_PRICE = 6500;
 export const FREE_EXPRESS_THRESHOLD = 7500;
 export const EXPRESS_FEE = 450;
@@ -105,7 +118,7 @@ export const GALLERY = [
   {
     src: "/images/gallery-studio.jpg",
     label: "Multi-Angle Engineering Showcase",
-    alt: "WiggleTug Core full kit — motor unit, spring, zig-zag rope, mint bone and ribbed ball",
+    alt: "WiggleTug Core full kit - motor unit, spring, zig-zag rope, mint bone and ribbed ball",
   },
   {
     src: "/images/gallery-top.jpg",
@@ -148,7 +161,7 @@ export const WHY_CARDS: {
   {
     icon: "timer",
     title: "All-Day Enrichment Pacing",
-    body: "The Auto-Day timer alternates gentle play with calm rest breaks across your 8-hour workday — engaged, never overstimulated.",
+    body: "The Auto-Day timer alternates gentle play with calm rest breaks across your 8-hour workday - engaged, never overstimulated.",
     illustration: "rhythm",
   },
 ];
@@ -169,7 +182,7 @@ export const HARDWARE = [
   {
     icon: "battery",
     title: "2–3 Day Battery + USB-C",
-    body: "No disposable batteries — recharge with any standard phone charger.",
+    body: "No disposable batteries - recharge with any standard phone charger.",
     stat: "USB-C 5V / 2A",
   },
   {
@@ -190,7 +203,7 @@ export const TIMELINE = [
   {
     time: "11:30 AM",
     title: "Midday Tug-of-War",
-    desc: "Spring mode engages — your dog bites the ribbed ball and tugs against realistic resistance.",
+    desc: "Spring mode engages - your dog bites the ribbed ball and tugs against realistic resistance.",
     icon: "spring",
   },
   {
@@ -202,7 +215,7 @@ export const TIMELINE = [
   {
     time: "5:30 PM",
     title: "You Come Home",
-    desc: "A happy, mentally fulfilled dog — and zero chewed furniture.",
+    desc: "A happy, mentally fulfilled dog - and zero chewed furniture.",
     icon: "home",
   },
 ];
@@ -218,11 +231,11 @@ export const FAQS = [
   },
   {
     q: "What if my dog is an aggressive chewer?",
-    a: "The braided cotton rope is machine-washable and the reinforced coil on the Heavy Power Tugger tier is built for 25 kg+ breeds. Chew attachments are consumables by design — swap in the Extra Chew Pack whenever the mint bone or ribbed ball shows heavy wear.",
+    a: "The braided cotton rope is machine-washable and the reinforced coil on the Heavy Power Tugger tier is built for 25 kg+ breeds. Chew attachments are consumables by design - swap in the Extra Chew Pack whenever the mint bone or ribbed ball shows heavy wear.",
   },
   {
     q: "How long does the battery last?",
-    a: "A typical Auto-Day schedule runs 2–3 days per charge. Top up with any standard USB-C phone charger (5V/2A) — a full charge takes about 3 hours, and the OLED shows live battery status.",
+    a: "A typical Auto-Day schedule runs 2–3 days per charge. Top up with any standard USB-C phone charger (5V/2A) - a full charge takes about 3 hours, and the OLED shows live battery status.",
   },
   {
     q: "Can I use it on carpet?",
@@ -230,7 +243,7 @@ export const FAQS = [
   },
   {
     q: "What's the return policy?",
-    a: "Every WiggleTug ships free with a 30-day “Happy Dog” guarantee — if your dog doesn't love it, send it back for a full refund, no questions asked. The motor and spring carry a 1-year warranty.",
+    a: "Every WiggleTug ships free with a 30-day “Happy Dog” guarantee - if your dog doesn't love it, send it back for a full refund, no questions asked. The motor and spring carry a 1-year warranty.",
   },
 ];
 
@@ -255,4 +268,52 @@ export const SPECS: [string, string][] = [
 ];
 
 export const SHIPPING_COPY =
-  "Free standard shipping across India (3–5 business days), with Express Next-Day available at checkout. Every order includes the 30-day “Happy Dog” return guarantee and a 1-year motor & spring warranty. Returns are free — we email a prepaid pickup label.";
+  "Free standard shipping across India (3–5 business days), with Express Next-Day available at checkout. Every order includes the 30-day “Happy Dog” return guarantee and a 1-year motor & spring warranty. Returns are free - we email a prepaid pickup label.";
+
+
+export const TIMERS = ["15M", "30M", "60M", "AUTO"] as const;
+export const SPEEDS = [
+  { name: "GENTLE", level: 1, dur: "1.7s" },
+  { name: "ACTIVE", level: 2, dur: "1.05s" },
+  { name: "PREY-CHASE", level: 3, dur: "0.6s" },
+] as const;
+
+export const BUTTONS = [
+  { id: "power", label: "POWER", icon: PowerIcon },
+  { id: "lock", label: "LOCK", icon: LockIcon },
+  { id: "timer", label: "TIMER", icon: Timer01Icon },
+  { id: "spring", label: "SPRING", icon: SpiralsIcon },
+  { id: "speed", label: "SPEED", icon: DashboardSpeed01Icon },
+] as const;
+
+export const INFO: Record<BtnId, { title: string; desc: string }> = {
+  power: {
+    title: "Power",
+    desc: "Wakes WiggleTug with a friendly greeting and lights up the live status OLED.",
+  },
+  lock: {
+    title: "Lock · 3× press",
+    desc: "Paw-proof lock guards every button against accidental presses. Three quick presses unlock it.",
+  },
+  timer: {
+    title: "Timer",
+    desc: "Cycles 15m / 30m / 60m / Auto-Day - calm rest breaks between sessions keep your dog engaged across an 8-hour workday.",
+  },
+  spring: {
+    title: "Spring",
+    desc: "Toggles the coil's live tug resistance: ON for expand-and-contract tug-of-war, OFF for fixed-rope chase and chew.",
+  },
+  speed: {
+    title: "Speed",
+    desc: "Sets zig-zag oscillation and vibration intensity - Gentle, Active, or full Prey-Chase.",
+  },
+};
+
+export const HARDWARE_ICONS = {
+  suction: Magnet01Icon,
+  bay: ArrowExpand01Icon,
+  battery: BatteryCharging01Icon,
+  modular: PuzzleIcon,
+} as const;
+
+export const BAR_HEIGHTS = [45, 70, 100, 78, 58];
