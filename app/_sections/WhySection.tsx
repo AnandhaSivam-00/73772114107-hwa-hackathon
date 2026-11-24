@@ -21,7 +21,7 @@ const ILLUSTRATIONS = {
 
 const WhySection = () => {
     return (
-        <section className='section-container min-dvh flex flex-col items-center justify-center gap-5 md:gap-10'>
+        <section className='section-container min-dvh flex flex-col items-center justify-center gap-5 md:gap-10 py-20 sm:py-24 lg:py-28'>
             <div className='container-title flex flex-col items-center justify-center gap-5'>
                 <h2 className='text-center'>Built for Real Dog Instincts, <span className="text-tangerine">Not 5-Minute Distractions</span></h2>
                 <p className='text-center text-forest-soft'>

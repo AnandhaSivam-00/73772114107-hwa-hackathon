@@ -1,14 +1,14 @@
 import type { BtnId } from "@/lib/types";
 import { 
+  AlarmClockIcon,
   ArrowExpand01Icon, 
   BatteryCharging01Icon, 
-  DashboardSpeed01Icon, 
-  LockIcon, 
+  DashboardSpeed01Icon,  
+  LockKeyholeIcon, 
   Magnet01Icon, 
   PowerIcon, 
   PuzzleIcon, 
   SpiralsIcon, 
-  Timer01Icon 
 } from "@hugeicons/core-free-icons";
 
 export const BASE_PRICE = 6500;
@@ -279,11 +279,11 @@ export const SPEEDS = [
 ] as const;
 
 export const BUTTONS = [
-  { id: "power", label: "POWER", icon: PowerIcon },
-  { id: "lock", label: "LOCK", icon: LockIcon },
-  { id: "timer", label: "TIMER", icon: Timer01Icon },
-  { id: "spring", label: "SPRING", icon: SpiralsIcon },
-  { id: "speed", label: "SPEED", icon: DashboardSpeed01Icon },
+  { id: "power", label: "Power", icon: PowerIcon },
+  { id: "lock", label: "Lock", icon: LockKeyholeIcon },
+  { id: "timer", label: "Timer", icon: AlarmClockIcon },
+  { id: "spring", label: "Spring", icon: SpiralsIcon },
+  { id: "speed", label: "Speed", icon: DashboardSpeed01Icon },
 ] as const;
 
 export const INFO: Record<BtnId, { title: string; desc: string }> = {
