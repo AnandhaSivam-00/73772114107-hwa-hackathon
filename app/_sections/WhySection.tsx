@@ -31,30 +31,32 @@ const WhySection = () => {
                 </p>
             </div>
 
-            <div className='grid grid-rows-auto sm:grid-cols-3 gap-3 md:gap-6'>
-                {WHY_CARDS.map((card) => {
+            <div className='grid grid-rows-auto sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6'>
+                {WHY_CARDS.map((card, index) => {
                     const Illustration = ILLUSTRATIONS[card.illustration];
 
                     return (
                         <article
                             key={card.title}
-                            className="group bg-card p-5 rounded-lg transition-all flex flex-col justify-between shadow-[0_8px_24px_rgba(40,54,24,0.06)] hover:shadow-[0_12px_32px_rgba(40,54,24,0.10)]"
+                            className={`group bg-card p-5 rounded-lg transition-all shadow-[0_8px_24px_rgba(40,54,24,0.06)] hover:shadow-[0_12px_32px_rgba(40,54,24,0.10)] ${index === 2 ? "sm:col-span-2 lg:col-span-1 flex flex-col sm:flex-row lg:flex-col justify-between" : "flex flex-col justify-between"}`}
                         >
-                            <span className="grid size-12 place-items-center rounded-md bg-honey/25 text-caramel group-hover:scale-105 transition-transform">
-                                <HugeiconsIcon
-                                    icon={ICONS[card.icon]}
-                                    size={24}
-                                    strokeWidth={1.9}
-                                />
-                            </span>
-                            <h3 className="mt-5 font-display text-2xl leading-[1.25] text-forest">
-                                {card.title}
-                            </h3>
-                            <p className="mt-2 flex-1 text-[15px] leading-[1.6] text-forest-soft">
-                                {card.body}
-                            </p>
-                            <div className="mt-6">
-                                <Illustration />
+                            <div>
+                                <span className="grid size-12 place-items-center rounded-md bg-honey/25 text-caramel group-hover:scale-105 transition-transform">
+                                    <HugeiconsIcon
+                                        icon={ICONS[card.icon]}
+                                        size={24}
+                                        strokeWidth={1.9}
+                                    />
+                                </span>
+                                <h3 className="mt-5 font-display text-2xl leading-[1.25] text-forest">
+                                    {card.title}
+                                </h3>
+                                <p className="mt-2 flex-1 text-[15px] leading-[1.6] text-forest-soft">
+                                    {card.body}
+                                </p>
+                                <div className="mt-6">
+                                    <Illustration />
+                                </div>
                             </div>
                         </article>
                     );

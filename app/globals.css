@@ -101,6 +101,7 @@
   --font-size: 16px;
   --font-weight-normal: 300;
   --font-weight-medium: 500;
+  --font-weight-semibold: 600;
 
   /* Typography — fluid type scale */
   --text-hero: clamp(1.802rem, 0.8255rem + 4.5953vw, 4.3869rem);

@@ -9,6 +9,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { ShoppingBag01Icon } from "@hugeicons/core-free-icons";
 
+import { Button } from "../ui/button";
+
 import useScroll from "@/lib/hooks/useScroll";
 import { useDependenciesCheck } from "@/lib/providers/DependenciesCheckProvider";
 
@@ -109,12 +111,12 @@ const Header = () => {
                     </Link>
 
                     <nav aria-label="Primary" className="justify-self-center">
-                        <ul className="flex items-center gap-3 sm:gap-8">
+                        <ul className="flex items-center gap-5 md:gap-8">
                             {NAV_LINKS.map((link) => (
                                 <li key={link.href}>
                                     <Link
                                         href={link.href}
-                                        className="text-[15px] font-semibold text-forest transition-colors hover:text-olive nav-link-indicator"
+                                        className="text-base font-medium text-forest transition-colors hover:text-olive nav-link-indicator"
                                     >
                                         <span className="hidden sm:inline">
                                             {link.label}
@@ -126,11 +128,7 @@ const Header = () => {
                     </nav>
 
                     <div className="justify-self-end">
-                        <button
-                            type="button"
-                            aria-label="Open cart"
-                            className="inline-flex cursor-pointer items-center gap-2 rounded-full bg-white/70 p-2 text-forest ring-1 ring-sand transition-colors hover:bg-white hover:text-tangerine focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-olive sm:px-4 sm:py-2"
-                        >
+                        <Button size="default" variant="secondary" className="p-2 sm:px-4 sm:py-2 hover:bg-cream-deep">
                             <HugeiconsIcon
                                 icon={ShoppingBag01Icon}
                                 size={18}
@@ -139,7 +137,7 @@ const Header = () => {
                             <span className="hidden text-sm font-semibold sm:inline">
                                 Cart
                             </span>
-                        </button>
+                        </Button>
                     </div>
                 </div>
             </div>

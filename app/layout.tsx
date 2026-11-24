@@ -13,7 +13,7 @@ import Header from "./_components/layout/header";
 const opensans = Open_Sans({
     subsets: ["latin"],
     style: ["italic", "normal"],
-    weight: ["300", "800"],
+    weight: ["300", "400", "500", "600", "700", "800"],
     variable: "--font-open-sans",
     display: "swap"
 });
