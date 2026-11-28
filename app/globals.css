@@ -14,6 +14,12 @@
   --color-caramel: #bc6c25;
   --color-sand: #e6dec3;
   --color-terracotta: #c93b2b;
+  --color-graphite: #2c2e27;
+  --color-graphite-deep: #23251f;
+  --color-moss: #a3c06a;
+
+  /* Compact label size for dense device readouts */
+  --text-2xs: 0.6875rem;
 
   --font-display: var(--font-bubblegum), "Trebuchet MS", cursive;
   --font-sans: var(--font-open-sans), ui-sans-serif, system-ui, sans-serif;
@@ -23,6 +29,8 @@
   --shadow-lift: 0 22px 46px -14px rgb(40 54 24 / 0.2);
   --shadow-glow: 0 10px 28px -6px rgb(251 97 7 / 0.45);
   --shadow-screen: inset 0 2px 16px rgb(0 0 0 / 0.7);
+  --shadow-device: 0 34px 70px -24px rgb(0 0 0 / 0.6);
+  --shadow-key: inset 0 -3px 6px rgb(0 0 0 / 0.5), 0 2px 5px rgb(0 0 0 / 0.4);
 
   /* Animations */
   --animate-eq: eq 1.1s ease-in-out infinite;
@@ -105,6 +113,7 @@
 
   /* Typography — fluid type scale */
   --text-hero: clamp(1.802rem, 0.8255rem + 4.5953vw, 4.3869rem);
+  --text-wordmark: clamp(2.75rem, 13.5vw, 12.5rem);
   --text-xx-large: clamp(1.6018rem, 0.8811rem + 3.3915vw, 3.5095rem);
   --text-x-large: clamp(1.4238rem, 0.9011rem + 2.4601vw, 2.8076rem);
   --text-large: clamp(1.2656rem, 0.8952rem + 1.7431vw, 2.2461rem);
@@ -419,6 +428,15 @@
   font-weight: 400;
   line-height: 1;
   letter-spacing: -0.01em;
+}
+
+@utility text-wordmark {
+  font-family: var(--font-display);
+  font-size: var(--text-wordmark);
+  font-weight: 400;
+  line-height: 0.8;
+  letter-spacing: -0.02em;
+  color: var(--foreground);
 }
 
 @layer utilities {
